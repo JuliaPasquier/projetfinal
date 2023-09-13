@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@800&family=Inter:wght@400;800&family=Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0%;
+}
+
+body {
+    background: linear-gradient(237deg, #2C2D65 0.35%, #201F22 100%);
+}
+
+.container {
+    position: relative;
+    max-width: 1440px;
+
+}
+
+.header {
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+}
+
+
+.header ul {
+    color: white;
+    position: absolute;
+    display: flex;
+    gap: 33px;
+}
+
+li {
+    list-style: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 400;
+    width: 78px;
+    height: 26px;
+    line-height: 26px;
+}
+
+.deco1 {
+    margin-top:-112px;
+}
+
+h1 span {
+    font-family: 'Barlow', sans-serif;
+    width: 121px;
+    height: 38px;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+
+}
+
+h1 {
+    color: white
+}
+
+span {
+    color: #E6606C;
+}
