@@ -1,86 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@800&family=Inter:wght@400;800&family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@800&family=Inter:wght@400;800&family=Raleway&display=swap");
 
 * {
-    box-sizing: border-box;
-    padding: 0%;
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
 }
-
-$couleur-txt-base: #2c2d65;
+$couleur-background: #2c2d65;
+$couleur-span: #e6606c;
+$couleur-text: white;
+$couleur-title: orange;
 
 body {
-    background-color: $couleur-txt-base;
-    position: relative;
+  background: $couleur-background;
+  background-image: url("/projetfinal/principal\ img.png");
+  background-repeat: no-repeat;
+  background-position: top -126px right -126px;
 }
 
 .container {
-    max-width: 1440px;
+  max-width: 1110px;
+  margin: 0% auto;
+  padding: 0%;
+}
+
+.header {
+  padding: 33px 0px;
+  color: $couleur-text;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      display: flex;
+      gap: 33px;
+    }
+  }
+
+  span {
+    color: $couleur-span;
+  }
+
+  li {
+    text-decoration: none;
+    list-style: none;
+  }
+}
+
+// MAIN //
+
+.main {
+  background-image: url("/projetfinal/deco1.png");
+  background-repeat: no-repeat;
+  background-position: 185px 150px 132px 77px;
+
+  .container {
+    max-width: 1110px;
     margin: 0% auto;
     padding: 0%;
 
+    .infos {
+      display: flex;
+      height: 77px;
+      top: 233px;
+      left: 120px;
+      font-size: 64px;
+      font-weight: 300;
+      line-height: 77px;
+      letter-spacing: 0.045em;
+      text-align: left;
+      margin-top: 233px;
+      margin-left: 120px;
 
-
-    .header {
+      h1{
         display: flex;
-        align-items: right;
-        justify-content: space-between;
-
-        ul {
-            color: white;
-            position: absolute;
-            display: flex;
-            gap: 33px;
-            margin-top: 29px;
-
-            li {
-                list-style: none;
-                font-size: 14px;
-                font-weight: 400;
-                margin-top: 24px;
-
-                a {
-                    text-decoration: none;
-                    font-size: 30px;
-                    font-weight: 400;
-                    width: 78px;
-                    height: 26px;
-                    line-height: 26px;
-
-                    .deco1 {
-                        display: flex;
-                        width: 730px;
-                        height: 747px;
-                        flex-shrink: 0;
-
-                    }
-                }
-            }
-        }
-
-
+      }
     }
-}
-
-
-
-.deco1 {
-    margin-top: -112px;
-}
-
-h1 span {
-    font-family: 'Barlow', sans-serif;
-    width: 121px;
-    height: 38px;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-
-}
-
-h1 {
-    color: white
-}
-
-span {
-    color: #E6606C;
+  }
 }
