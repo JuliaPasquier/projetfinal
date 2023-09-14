@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@800&family=Inter:wght@400;800&family=Raleway&display=swap");
+@import "./01tailleEcrans";
+@import "./02Mixins";
+@import "./03colors";
+@import "./04\ Font-family";
 
 * {
   box-sizing: border-box;
   padding: 0%;
   margin: 0%;
 }
-$couleur-background: #2c2d65;
-$couleur-span: #e6606c;
-$couleur-text: white;
-$couleur-title: orange;
 
 body {
   background: $couleur-background;
@@ -17,17 +17,12 @@ body {
   background-position: top -126px right -126px;
 }
 
-.container {
-  max-width: 1110px;
-  margin: 0% auto;
-  padding: 0%;
-}
-
-.header {
+header {
   padding: 33px 0px;
   color: $couleur-text;
 
-  .container {
+  .containerHeader {
+    @include initContainer;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,32 +45,58 @@ body {
 
 // MAIN //
 
-.main {
-  background-image: url("/projetfinal/deco1.png");
-  background-repeat: no-repeat;
-  background-position: 185px 150px 132px 77px;
+main {
+  @include initContainer;
+  font-family: "Barlow", sans-serif;
+}
 
-  .container {
-    max-width: 1110px;
-    margin: 0% auto;
-    padding: 0%;
+.infos {
+  display: grid;
+  grid-template-columns: repeat(1, max-content);
+  grid-template-rows: repeat(4, max-content);
+  margin-top: 164px;
+  gap: 21px;
 
-    .infos {
-      display: flex;
-      height: 77px;
-      top: 233px;
-      left: 120px;
-      font-size: 64px;
-      font-weight: 300;
-      line-height: 77px;
-      letter-spacing: 0.045em;
-      text-align: left;
-      margin-top: 233px;
-      margin-left: 120px;
-
-      h1{
-        display: flex;
-      }
-    }
+  h1 {
+    color: $couleur-text;
   }
+
+  h2 {
+    color: $couleur-title;
+  }
+}
+
+.para1 {
+  margin-bottom: 20px;
+}
+
+.buttonDiv {
+  display: grid;
+  grid-template-rows: repeat(1, max-content);
+  grid-template-columns: repeat(2, max-content);
+  gap: 24px;
+}
+
+.btnStart {
+  button{
+    @include initBouton($couleur-text, $couleur-span);
+  }
+  a{
+    color:$couleur-text;
+    text-decoration: none;
+  }
+
+  button:hover{
+    background-color: black;
+  }
+}
+
+.btnKM button {
+  @include initBouton(black, white);
+}
+
+// ARTICLE //
+
+.elipse {
+  margin: 907px 163px 1540px 1067px;
 }

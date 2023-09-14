@@ -1,0 +1,48 @@
+
+@mixin ipad() {
+  @media screen and (min-width: $ipad) {
+    @content;
+  }
+}
+@mixin ipadPro() {
+  @media screen and (min-width: $ipadPro) {
+    @content;
+  }
+}
+@mixin laptop13() {
+  @media screen and (min-width: $laptop13) {
+    @content;
+  }
+}
+@mixin laptop() {
+  @media screen and (min-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin pc() {
+  @media screen and (min-width: $pc) {
+    @content;
+  }
+}
+
+@mixin bigPc() {
+  @media screen and (min-width: $bigPc) {
+    @content;
+  }
+}
+
+@mixin initContainer(){
+  max-width: 1110px;
+  margin: 0% auto;
+  padding: 0%;
+}
+
+@mixin initBouton ($couleurText, $couleurFond){
+  color: $couleurText;
+  background-color: $couleurFond;
+  border-radius: 75px;
+  width: 152px;
+  height: 43px;
+  border: none;
+}
