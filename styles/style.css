@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@800&family=Inter:wght@400;800&family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Allan&family=Barlow:wght@300&family=Open+Sans:ital,wght@0,300;0,400;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allan&family=Barlow:wght@300;400&family=Open+Sans:ital,wght@0,300;0,400;1,600&display=swap");
 * {
   box-sizing: border-box;
   padding: 0%;
@@ -18,12 +19,15 @@ header {
   color: white;
 }
 header .containerHeader {
-  max-width: 1110px;
+  max-width: 1440px;
   margin: 0% auto;
   padding: 0%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+header .containerHeader h1 {
+  font-family: "Barlow", sans-serif;
 }
 header .containerHeader ul {
   display: flex;
@@ -38,7 +42,7 @@ header li {
 }
 
 main {
-  max-width: 1110px;
+  max-width: 1440px;
   margin: 0% auto;
   padding: 0%;
   font-family: "Barlow", sans-serif;
@@ -53,13 +57,37 @@ main {
 }
 .infos h1 {
   color: white;
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 77px;
+  letter-spacing: 0.045em;
+  text-align: left;
 }
 .infos h2 {
   color: orange;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38px;
+  letter-spacing: 0.045em;
+  text-align: left;
+}
+.infos::before {
+  background-image: url("/projetfinal/deco1.png");
+  background-repeat: no-repeat;
+}
+.infos::after {
+  background-image: url("/projetfinal/deco2.png");
+  background-repeat: no-repeat;
 }
 
 .para1 {
-  margin-bottom: 20px;
+  color: #EFEFEF;
+  margin-bottom: 18px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0.045em;
+  text-align: left;
 }
 
 .buttonDiv {
@@ -94,6 +122,55 @@ main {
   border: none;
 }
 
-.elipse {
-  margin: 907px 163px 1540px 1067px;
+.article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 156px;
+}
+
+.lorem {
+  color: white;
+  display: grid;
+  grid-template-rows: repeat(5, min-content);
+  gap: 17px;
+  margin-top: 40px;
+  width: 90%;
+  gap: 30px span;
+  gap-width: 62px;
+  gap-height: 32px;
+  gap-top: 839px;
+  gap-left: 835px;
+  gap-font-size: 16px;
+  gap-font-weight: 400;
+  gap-line-height: 32px;
+  gap-letter-spacing: 3px;
+  gap-text-align: left;
+}
+.lorem h1 {
+  height: 128px;
+  top: 887px;
+  left: 835px;
+  font-size: 46px;
+  font-weight: 300;
+  line-height: 64px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.lorem h2 {
+  height: 70px;
+  top: 1045px;
+  left: 835px;
+  font-family: Barlow;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.lorem p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */

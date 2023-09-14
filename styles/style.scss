@@ -26,6 +26,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    h1{
+      font-family: 'Barlow', sans-serif;
+    }
 
     ul {
       display: flex;
@@ -59,15 +62,39 @@ main {
 
   h1 {
     color: $couleur-text;
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 77px;
+    letter-spacing: 0.045em;
+    text-align: left;
+    
   }
 
   h2 {
     color: $couleur-title;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0.045em;
+    text-align: left;
+  }
+  &::before {
+    background-image: url("/projetfinal/deco1.png");
+    background-repeat: no-repeat;
+  }
+  &::after {
+    background-image: url("/projetfinal/deco2.png");
+    background-repeat: no-repeat;
   }
 }
-
 .para1 {
-  margin-bottom: 20px;
+  color: $couleur-para;
+  margin-bottom: 18px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0.045em;
+  text-align: left;
 }
 
 .buttonDiv {
@@ -78,15 +105,15 @@ main {
 }
 
 .btnStart {
-  button{
+  button {
     @include initBouton($couleur-text, $couleur-span);
   }
-  a{
-    color:$couleur-text;
+  a {
+    color: $couleur-text;
     text-decoration: none;
   }
 
-  button:hover{
+  button:hover {
     background-color: black;
   }
 }
@@ -97,6 +124,55 @@ main {
 
 // ARTICLE //
 
-.elipse {
-  margin: 907px 163px 1540px 1067px;
+.article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 156px;
+}
+.lorem {
+  color: $couleur-text;
+  display: grid;
+  grid-template-rows: repeat(5, min-content);
+  gap: 17px;
+  margin-top: 40px;
+  width: 90%;
+  gap: 30px span {
+    width: 62px;
+    height: 32px;
+    top: 839px;
+    left: 835px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-align: left;
+  }
+  h1 {
+    height: 128px;
+    top: 887px;
+    left: 835px;
+    font-size: 46px;
+    font-weight: 300;
+    line-height: 64px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  h2 {
+    height: 70px;
+    top: 1045px;
+    left: 835px;
+    font-family: Barlow;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
 }
