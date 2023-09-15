@@ -251,73 +251,9 @@ main {
   height: 64px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  background: linear-gradient(180deg, #4d4f95 0%, #2b2d66 100%);
+.Cards {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #EFEFEF;
-  margin-top: 77px;
-  margin-bottom: 50px;
-  border: 2px;
-  height: 432px;
-  top: 1724px;
-  left: 915px;
-  border: 2px;
-  gap: 30px;
-}
-.grid .txt1 {
-  background: linear-gradient(180deg, #4d4f95 0%, #2b2d66 100%);
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 32px;
-  letter-spacing: 0px;
-  margin-top: 24px;
-  color: #EFEFEF;
-  margin-bottom: 50px;
-  border: 2px;
-  width: 370px;
-  height: 432px;
-  top: 1724px;
-  left: 915px;
-  border: 2px;
-  gap: 30px;
-}
-.grid .txt2 {
-  background: linear-gradient(180deg, #4d4f95 0%, #2b2d66 100%);
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 32px;
-  letter-spacing: 0px;
-  margin-top: 24px;
-  color: #EFEFEF;
-  margin-top: 77px;
-  margin-bottom: 50px;
-  border: 2px;
-  width: 370px;
-  height: 432px;
-  top: 1724px;
-  left: 915px;
-  border: 2px;
-  gap: 30px;
-}
-.grid .txt3 {
-  background: linear-gradient(180deg, #4d4f95 0%, #2b2d66 100%);
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 32px;
-  letter-spacing: 0px;
-  margin-top: 24px;
-  color: #EFEFEF;
-  margin-top: 77px;
-  margin-bottom: 50px;
-  border: 2px;
-  width: 370px;
-  height: 432px;
-  top: 1724px;
-  left: 915px;
-  border: 2px;
-  gap: 30px;
+  margin-top: 70px;
 }/*# sourceMappingURL=style.css.map */
