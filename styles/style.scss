@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@800&family=Inter:wght@400;800&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allan&family=Barlow+Condensed:wght@300&family=Barlow:wght@300;400&family=Open+Sans:ital,wght@0,300;0,400;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allan&family=Barlow:wght@300;400&family=Open+Sans:ital,wght@0,300;0,400;1,600&display=swap");
 @import "./01tailleEcrans";
 @import "./02Mixins";
 @import "./03colors";
@@ -26,8 +28,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    h1{
-      font-family: 'Barlow', sans-serif;
+    h1 {
+      font-family: "Barlow", sans-serif;
     }
 
     ul {
@@ -67,7 +69,6 @@ main {
     line-height: 77px;
     letter-spacing: 0.045em;
     text-align: left;
-    
   }
 
   h2 {
@@ -79,12 +80,24 @@ main {
     text-align: left;
   }
   &::before {
+    content: "";
+    position: absolute;
+    width: 142px;
+    height: 153px;
     background-image: url("/projetfinal/deco1.png");
     background-repeat: no-repeat;
+    margin-top: -40px;
+    margin-left: -50px;
   }
   &::after {
+    content: "";
+    position: absolute;
+    width: 184px;
+    height: 181px;
     background-image: url("/projetfinal/deco2.png");
     background-repeat: no-repeat;
+    margin-top: 215px;
+    margin-left: 250px;
   }
 }
 .para1 {
@@ -147,6 +160,7 @@ main {
     letter-spacing: 3px;
     text-align: left;
   }
+
   h1 {
     height: 128px;
     top: 887px;
@@ -156,6 +170,16 @@ main {
     line-height: 64px;
     letter-spacing: 0px;
     text-align: left;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background-image: url("/projetfinal/Ellipse\ 1.png");
+    background-repeat: no-repeat;
+    margin-top: 60px;
+    margin-left: 230px;
   }
   h2 {
     height: 70px;
@@ -169,10 +193,64 @@ main {
     text-align: left;
   }
   p {
+    color: $couleur-para;
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
     letter-spacing: 0px;
     text-align: left;
+    margin-bottom: 28px;
+  }
+}
+.article2 {
+  color: $couleur-text;
+  font-family: "Barlow Condensed", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(1, max-content);
+  grid-template-rows: repeat(3, max-content);
+  justify-content: center;
+  text-align: center;
+  gap: 21px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1325px;
+    left: 422px;
+    width: 142px;
+    height: 153px;
+    background-image: url("/projetfinal/deco3.png");
+    background-repeat: no-repeat;
+  }
+
+  .article h2 {
+    color: $couleur-para;
+    text-align: center;
+    width: 57px;
+    height: 32px;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 3px;
+    
+    h1 {
+      font-size: 56px;
+      font-weight: 300;
+      line-height: 64px;
+      letter-spacing: 0px;
+      text-align: center;
+      width: 405px;
+      height: 64px;
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0px;
+        text-align: center;
+        width: 570px;
+        height: 64px;
+      }
+    }
   }
 }
