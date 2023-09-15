@@ -249,4 +249,21 @@ main {
   text-align: center;
   width: 570px;
   height: 64px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 77px;
+}
+
+.txt1 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0px;
+  margin-top: 24px;
 }/*# sourceMappingURL=style.css.map */
