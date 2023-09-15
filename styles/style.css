@@ -251,9 +251,28 @@ main {
   height: 64px;
 }
 
-.Cards {
+.grid {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 70px;
+  flex-wrap: wrap;
+}
+.grid .grid__item {
+  width: calc(33.33% - 20px);
+  margin: 10px;
+}
+.grid .grid__item .card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.grid .grid__item .card .card__img {
+  width: 100%;
+}
+.grid .grid__item .card .card__content {
+  margin-top: 20px;
+}
+.grid .grid__item .card .card__content .card__header {
+  font-size: 16px;
+  font-weight: bold;
+}
+.grid .grid__item .card .card__content .card__text {
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */
