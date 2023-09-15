@@ -48,7 +48,7 @@ header {
   }
 }
 
-// MAIN //
+///////////////////////// MAIN ////////////////////////////////////
 
 main {
   @include initContainer;
@@ -135,7 +135,7 @@ main {
   @include initBouton(black, white);
 }
 
-// ARTICLE //
+////////////////////////// FIRST ARTICLE ////////////////////////////////////////
 
 .article {
   display: grid;
@@ -149,7 +149,8 @@ main {
   gap: 17px;
   margin-top: 40px;
   width: 90%;
-  gap: 30px span {
+  gap: 30px;
+  span {
     width: 62px;
     height: 32px;
     top: 839px;
@@ -222,17 +223,21 @@ main {
     background-image: url("/projetfinal/deco3.png");
     background-repeat: no-repeat;
   }
+}
+///////////////// SECOND ARTICLE ///////////////////////////
 
-  .article h2 {
-    color: $couleur-para;
+.lorem {
+  color: $couleur-para;
+  text-align: center;
+  .span {
+    $couleur-lorem: rgba(255, 255, 255, 0.5);
     text-align: center;
-    width: 57px;
-    height: 32px;
-    font-size: 56px;
+    font-size: 16px;
+    font-style: normal;
     font-weight: 400;
     line-height: 32px;
     letter-spacing: 3px;
-
+    text-transform: uppercase;
     h1 {
       font-size: 56px;
       font-weight: 300;
@@ -254,6 +259,8 @@ main {
     }
   }
 }
+
+/////////////////// GRID ///////////////////////////
 
 .grid {
   display: flex;
@@ -304,7 +311,8 @@ main {
       font-weight: 400;
       line-height: 32px;
       margin-left: 32px;
-  
     }
   }
 }
+
+///////////////FOOTER//////////

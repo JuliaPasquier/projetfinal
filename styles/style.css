@@ -150,16 +150,18 @@ main {
   gap: 17px;
   margin-top: 40px;
   width: 90%;
-  gap: 30px span;
-  gap-width: 62px;
-  gap-height: 32px;
-  gap-top: 839px;
-  gap-left: 835px;
-  gap-font-size: 16px;
-  gap-font-weight: 400;
-  gap-line-height: 32px;
-  gap-letter-spacing: 3px;
-  gap-text-align: left;
+  gap: 30px;
+}
+.lorem span {
+  width: 62px;
+  height: 32px;
+  top: 839px;
+  left: 835px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 3px;
+  text-align: left;
 }
 .lorem h1 {
   height: 128px;
@@ -222,17 +224,21 @@ main {
   background-image: url("/projetfinal/deco3.png");
   background-repeat: no-repeat;
 }
-.article2 .article h2 {
+
+.lorem {
   color: #EFEFEF;
   text-align: center;
-  width: 57px;
-  height: 32px;
-  font-size: 56px;
+}
+.lorem .span {
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 400;
   line-height: 32px;
   letter-spacing: 3px;
+  text-transform: uppercase;
 }
-.article2 .article h2 h1 {
+.lorem .span h1 {
   font-size: 56px;
   font-weight: 300;
   line-height: 64px;
@@ -241,7 +247,7 @@ main {
   width: 405px;
   height: 64px;
 }
-.article2 .article h2 h1 p {
+.lorem .span h1 p {
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
