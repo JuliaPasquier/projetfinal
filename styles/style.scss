@@ -218,7 +218,8 @@ main {
 @media screen and (max-width: 768px) {
   .article {
     grid-template-columns: 1fr; /* Change to a single column layout */
-    margin-top: 80px; /* Adjust top margin as needed */
+    margin-top: 80px; 
+    /* Adjust top margin as needed */
   }
 
   .lorem {
