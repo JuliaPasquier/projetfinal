@@ -225,11 +225,28 @@ main {
   background-repeat: no-repeat;
 }
 
-.lorem {
-  color: #EFEFEF;
+.article2 {
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(1, max-content);
+  grid-template-rows: repeat(3, max-content);
+  justify-content: center;
   text-align: center;
+  gap: 21px;
 }
-.lorem .span {
+.article2::before {
+  content: "";
+  position: relative;
+  top: 100%;
+  left: -20%;
+  width: 142px;
+  height: 153px;
+  background-image: url("/projetfinal/deco3.png");
+  background-repeat: no-repeat;
+}
+.article2 h2 {
+  color: rgba(255, 255, 255, 0.5);
   text-align: center;
   font-size: 16px;
   font-style: normal;
@@ -238,23 +255,20 @@ main {
   letter-spacing: 3px;
   text-transform: uppercase;
 }
-.lorem .span h1 {
+.article2 h1 {
+  text-align: center;
   font-size: 56px;
+  font-style: normal;
   font-weight: 300;
   line-height: 64px;
-  letter-spacing: 0px;
-  text-align: center;
-  width: 405px;
-  height: 64px;
 }
-.lorem .span h1 p {
+.article2 p {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
   font-size: 16px;
+  font-style: normal;
   font-weight: 400;
   line-height: 32px;
-  letter-spacing: 0px;
-  text-align: center;
-  width: 570px;
-  height: 64px;
 }
 
 .grid {
