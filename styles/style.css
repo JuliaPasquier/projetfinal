@@ -4,6 +4,145 @@
 @import url("https://fonts.googleapis.com/css2?family=Allan&family=Barlow:wght@300&family=Open+Sans:ital,wght@0,300;0,400;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Allan&family=Barlow:wght@300;400&family=Open+Sans:ital,wght@0,300;0,400;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Allan&family=Barlow+Condensed:wght@300&family=Barlow:wght@300;400&family=Open+Sans:ital,wght@0,300;0,400;1,600&display=swap");
+@media screen and (max-width: 768px) {
+  .infos {
+    justify-content: center;
+  }
+  .infos h1 {
+    text-align: center;
+  }
+  .infos h2 {
+    text-align: center;
+  }
+  .infos .para1 {
+    text-align: center;
+  }
+  .infos .buttonDiv {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .img {
+    display: flex;
+    justify-content: center;
+    margin: 0, auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .article {
+    grid-template-columns: 1fr;
+    margin-top: 80px;
+  }
+  .lorem {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .lorem span {
+    text-align: center;
+  }
+  .lorem h1 {
+    top: auto;
+    left: auto;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+  }
+  .lorem::before {
+    margin-top: 50px;
+    margin-left: 380px;
+  }
+  .lorem h2 {
+    top: auto;
+    left: auto;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+  }
+  .lorem p {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .lorem .btnStart {
+    display: flex;
+    justify-content: center;
+  }
+}
+.article2 {
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(1, max-content);
+  grid-template-rows: repeat(3, max-content);
+  justify-content: center;
+  text-align: center;
+  gap: 21px;
+}
+.article2::before {
+  content: "";
+  position: relative;
+  top: 100%;
+  left: -20%;
+  width: 142px;
+  height: 153px;
+  background-image: url("/deco3.png");
+  background-repeat: no-repeat;
+}
+.article2 h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 64px;
+}
+.article2 h2 {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.article2 p {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+@media screen and (max-width: 768px) {
+  .article2 {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 10px;
+  }
+  .article2::before {
+    left: 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .grid__item {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+  .grid__item .card__img {
+    width: 100%;
+    height: auto;
+  }
+  .grid__item .card__content .card__header {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+}
 * {
   box-sizing: border-box;
   padding: 0%;
@@ -137,10 +276,33 @@ main {
   border: none;
 }
 
+@media screen and (max-width: 1280px) {
+  .infos {
+    justify-content: center;
+  }
+  .infos h1 {
+    text-align: center;
+  }
+  .infos h2 {
+    text-align: center;
+  }
+  .infos .para1 {
+    text-align: center;
+  }
+  .infos .buttonDiv {
+    justify-content: center;
+  }
+}
 .article {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
   margin-top: 156px;
+}
+@media screen and (min-width: 1280px) {
+  .article {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .lorem {
@@ -154,7 +316,6 @@ main {
 }
 .lorem span {
   color: rgba(255, 255, 255, 0.5);
-  width: 62px;
   height: 32px;
   top: 839px;
   left: 835px;
@@ -205,37 +366,51 @@ main {
   margin-bottom: 28px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
+  .img {
+    display: flex;
+    justify-content: center;
+    margin: 0, auto;
+  }
+}
+@media screen and (max-width: 1280px) {
   .article {
-    grid-template-columns: 1fr; /* Change to a single column layout */
-    margin-top: 80px; /* Adjust top margin as needed */
+    grid-template-columns: 1fr;
+    margin-top: 80px;
   }
   .lorem {
-    width: 100%; /* Make the content full width */
-    text-align: center; /* Center-align text */
-    margin-top: 20px; /* Adjust top margin as needed */
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
   }
   .lorem span {
-    top: auto; /* Remove absolute positioning */
-    left: auto;
+    text-align: center;
   }
   .lorem h1 {
     top: auto;
     left: auto;
-    font-size: 36px; /* Adjust font size for smaller screens */
+    font-size: 36px;
     line-height: 48px;
+    text-align: center;
   }
   .lorem::before {
-    content: none; /* Hide the background image on smaller screens */
+    margin-top: 50px;
+    margin-left: 380px;
   }
   .lorem h2 {
     top: auto;
     left: auto;
-    font-size: 18px; /* Adjust font size for smaller screens */
+    font-size: 18px;
     line-height: 28px;
+    text-align: center;
   }
   .lorem p {
-    margin-bottom: 20px; /* Adjust bottom margin as needed */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .lorem .btnStart {
+    display: flex;
+    justify-content: center;
   }
 }
 .article2 {
@@ -283,42 +458,48 @@ main {
   font-weight: 400;
   line-height: 32px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   .article2 {
     /* Add responsive styles for screens with a maximum width of 768px */
-    grid-template-columns: 1fr; /* Change to a single column layout */
-    text-align: left; /* Adjust text alignment as needed */
-    gap: 10px; /* Reduce the gap between elements */
+    grid-template-columns: 1fr;
+    /* Change to a single column layout */
+    text-align: left;
+    /* Adjust text alignment as needed */
+    gap: 10px;
+    /* Reduce the gap between elements */
   }
   .article2::before {
-    display: none; /* Hide the background image on smaller screens */
+    /* Hide the background image on smaller screens */
   }
 }
 
 .grid {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
   margin-top: 70px;
+  justify-content: center;
+  gap: 30px;
 }
-.grid .grid__item {
-  margin: 10px;
-  background-image: url(/projetfinal/Rectangle.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  flex-shrink: 0;
-  border: 2px solid rgba(255, 255, 255, 0.08);
+@media screen and (max-width: 1280px) {
+  .grid {
+    align-items: center;
+    grid-template-columns: 1fr;
+  }
+}
+.grid img {
+  width: 100%;
+}
+.grid .card {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 0.125rem solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(180deg, #4d4f95 0%, #2b2d66 100%);
   box-shadow: 0px 24px 48px 0px rgba(0, 1, 44, 0.16);
-  border-radius: 12px;
-  height: 432px;
 }
-.grid .grid__item .card__content {
+.grid .card .card__content {
   margin-top: 20px;
 }
-.grid .grid__item .card__content .card__header {
+.grid .card .card__content .card__header {
   position: relative;
   color: white;
   font-size: 24px;
@@ -329,7 +510,7 @@ main {
   margin-left: 32px;
   margin-bottom: 20px;
 }
-.grid .grid__item .card__text {
+.grid .card .card__text {
   color: white;
   font-size: 16px;
   font-weight: 400;
@@ -337,26 +518,6 @@ main {
   margin-left: 32px;
 }
 
-/* Responsive styles for screens with a maximum width of 768px */
-@media screen and (max-width: 768px) {
-  .grid {
-    justify-content: center; /* Center-align the items */
-    margin-top: 40px; /* Adjust top margin as needed */
-  }
-  .grid__item {
-    width: 100%; /* Make the items span the full width of the viewport */
-    max-width: 350px; /* Limit the maximum width of items */
-    height: auto; /* Allow the height to adjust based on content */
-  }
-  .grid__item .card__img {
-    width: 100%; /* Make the images span the full width of the item */
-    height: auto; /* Allow the height to adjust based on content */
-  }
-  .grid__item .card__content .card__header {
-    width: 100%; /* Make the header span the full width */
-    margin: 0 0 10px 0; /* Adjust margins as needed */
-  }
-}
 footer {
   max-width: 85vw;
   margin: 0% auto;
@@ -447,34 +608,54 @@ span {
 }
 
 /* Responsive styles for screens with a maximum width of 768px */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   .container_footer {
-    grid-template-columns: 1fr; /* Change to a single column layout */
-    margin-top: 40px; /* Adjust top margin as needed */
-    margin-bottom: 20px; /* Adjust bottom margin as needed */
+    grid-template-columns: 1fr;
+    /* Change to a single column layout */
+    margin-top: 40px;
+    /* Adjust top margin as needed */
+    margin-bottom: 20px;
+    /* Adjust bottom margin as needed */
   }
   .logo {
-    margin-left: 0; /* Remove left margin */
-    text-align: center; /* Center-align the logo */
+    margin-left: 0;
+    /* Remove left margin */
+    text-align: center;
+    /* Center-align the logo */
   }
-  .menu, .service {
-    margin-left: 0; /* Remove left margin */
-    text-align: center; /* Center-align the menu and service sections */
+  .menu,
+  .service {
+    margin-left: 0;
+    /* Remove left margin */
+    text-align: center;
+    /* Center-align the menu and service sections */
   }
-  .menu h1, .service h1 {
-    margin-bottom: 10px; /* Adjust margin as needed */
+  .menu h1,
+  .service h1 {
+    margin-bottom: 10px;
+    /* Adjust margin as needed */
   }
-  .menu .menuList, .menu .serviceList, .service .menuList, .service .serviceList {
-    margin-left: 0; /* Remove left margin */
+  .menu .menuList,
+  .menu .serviceList,
+  .service .menuList,
+  .service .serviceList {
+    margin-left: 0;
+    /* Remove left margin */
   }
   .social-icons {
-    justify-content: center; /* Center-align the social icons */
-    margin-left: 0; /* Remove left margin */
+    justify-content: center;
+    /* Center-align the social icons */
+    margin-left: 0;
+    /* Remove left margin */
     margin-top: 10px;
   }
-  .social-icons .iconeFB, .social-icons .iconeX, .social-icons .iconeInsta {
-    margin-top: 10; /* Remove top margin */
-    margin-left: 18px; /* Add some spacing between icons */
+  .social-icons .iconeFB,
+  .social-icons .iconeX,
+  .social-icons .iconeInsta {
+    margin-top: 10;
+    /* Remove top margin */
+    margin-left: 18px;
+    /* Add some spacing between icons */
   }
 }
 hr {
@@ -483,11 +664,30 @@ hr {
   flex-shrink: 0;
   opacity: 0.0797;
   margin-bottom: 41px;
+  margin-top: 2rem;
 }
 
 .Final {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .Final hr {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .Final .Final {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Final .terms,
+  .Final .private {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
 }
 
 .copyright {
@@ -518,20 +718,28 @@ hr {
   margin-right: 6%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   hr {
-    width: 100%; /* Make the <hr> span the full width of the viewport */
-    margin-left: 0; /* Remove left margin */
-    margin-right: 0; /* Remove right margin */
-    margin-bottom: 20px; /* Adjust margin as needed */
+    width: 100%;
+    /* Make the <hr> span the full width of the viewport */
+    margin-left: 0;
+    /* Remove left margin */
+    margin-right: 0;
+    /* Remove right margin */
+    margin-bottom: 20px;
+    /* Adjust margin as needed */
   }
   .Final {
-    flex-direction: column; /* Change to a vertical layout */
-    align-items: center; /* Center-align the content */
+    flex-direction: column;
+    /* Change to a vertical layout */
+    align-items: center;
+    /* Center-align the content */
   }
-  .terms, .private {
+  .terms,
+  .private {
     margin-left: 0;
     margin-right: 0;
-    text-align: center; /* Center-align the text */
+    text-align: center;
+    /* Center-align the text */
   }
 }/*# sourceMappingURL=style.css.map */

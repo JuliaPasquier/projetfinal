@@ -5,6 +5,7 @@
 @import "./02Mixins";
 @import "./03colors";
 @import "./04\ Font-family";
+@import "05Mobile";
 
 * {
   box-sizing: border-box;
@@ -18,6 +19,7 @@ body {
   background-repeat: no-repeat;
   background-position: top -126px right -126px;
 }
+
 
 header {
   padding: 33px 0px;
@@ -48,6 +50,7 @@ header {
     list-style: none;
   }
 }
+
 
 ///////////////////////// MAIN ////////////////////////////////////
 
@@ -140,13 +143,41 @@ main {
   @include initBouton(black, white);
 }
 
+@media screen and (max-width: 1280px) {
+  .infos {
+      justify-content: center;
+
+      h1 {
+          text-align: center;
+      }
+
+      h2 {
+          text-align: center;
+      }
+
+      .para1 {
+          text-align: center;
+      }
+
+      .buttonDiv {
+          justify-content: center;
+      }
+  }
+}
+
 ////////////////////////// FIRST ARTICLE ////////////////////////////////////////
 
 .article {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
   margin-top: 156px;
+
+  @include laptop13 {
+    grid-template-columns: 1fr 1fr;
+  }
 }
+
 
 .lorem {
   color: $couleur-text;
@@ -159,7 +190,6 @@ main {
 
   span {
     color: $couleur-lorem;
-    width: 62px;
     height: 32px;
     top: 839px;
     left: 835px;
@@ -214,48 +244,69 @@ main {
     margin-bottom: 28px;
   }
 }
-/////////////////////////////////////////////////////////////////////////////////////////////////
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
+  .img {
+      display: flex;
+      justify-content: center;
+      margin: 0, auto;
+  }
+}
+@media screen and (max-width: 1280px) {
   .article {
-    grid-template-columns: 1fr; /* Change to a single column layout */
-    margin-top: 80px; 
-    /* Adjust top margin as needed */
+      grid-template-columns: 1fr;
+
+      margin-top: 80px;
+
   }
 
   .lorem {
-    width: 100%; /* Make the content full width */
-    text-align: center; /* Center-align text */
-    margin-top: 20px; /* Adjust top margin as needed */
+      width: 100%;
 
-    span {
-      top: auto; /* Remove absolute positioning */
-      left: auto;
-    }
+      margin-top: 20px;
 
-    h1 {
-      top: auto;
-      left: auto;
-      font-size: 36px; /* Adjust font size for smaller screens */
-      line-height: 48px;
-    }
+      justify-content: center;
 
-    &::before {
-      content: none; /* Hide the background image on smaller screens */
-    }
 
-    h2 {
-      top: auto;
-      left: auto;
-      font-size: 18px; /* Adjust font size for smaller screens */
-      line-height: 28px;
-    }
+      span {
+          text-align: center;
+      }
 
-    p {
-      margin-bottom: 20px; /* Adjust bottom margin as needed */
-    }
+      h1 {
+          top: auto;
+          left: auto;
+          font-size: 36px;
+
+          line-height: 48px;
+          text-align: center;
+      }
+
+      &::before {
+          margin-top: 50px;
+          margin-left: 380px;
+      }
+
+      h2 {
+          top: auto;
+          left: auto;
+          font-size: 18px;
+
+          line-height: 28px;
+          text-align: center;
+
+      }
+
+      p {
+          margin-bottom: 20px;
+          text-align: center;
+
+      }
+
+      .btnStart {
+          display: flex;
+          justify-content: center;
+      }
   }
 }
-/////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////// SECOND ARTICLE ///////////////////////////
 
@@ -307,43 +358,49 @@ main {
     font-weight: 400;
     line-height: 32px;
   }
-/////////////////////////////////////////////////////////////////////////////////////////////////
-  @media screen and (max-width: 768px) {
+
+  /////////////////////////////////////////////////////////////////////////////////////////////////
+  @media screen and (max-width: 1280px) {
     /* Add responsive styles for screens with a maximum width of 768px */
-    grid-template-columns: 1fr; /* Change to a single column layout */
-    text-align: left; /* Adjust text alignment as needed */
-    gap: 10px; /* Reduce the gap between elements */
-    
+    grid-template-columns: 1fr;
+    /* Change to a single column layout */
+    text-align: left;
+    /* Adjust text alignment as needed */
+    gap: 10px;
+    /* Reduce the gap between elements */
+
     &::before {
-      display: none; /* Hide the background image on smaller screens */
+      //display: none;
+      /* Hide the background image on smaller screens */
     }
   }
-/////////////////////////////////////////////////////////////////////////////////////////////////
+
+  /////////////////////////////////////////////////////////////////////////////////////////////////
 }
-
-
 
 /////////////////// GRID ///////////////////////////
 
 .grid {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3,max-content);
   margin-top: 70px;
+  justify-content: center;
+  gap:30px;
 
-  .grid__item {
-    margin: 10px;
-    background-image: url(/projetfinal/Rectangle.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    flex-shrink: 0;
-    border: 2px solid rgba(255, 255, 255, 0.08);
+  @media screen and (max-width: 1280px) {
+    align-items: center;
+    grid-template-columns: 1fr;
+  }
+
+  img{
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 0.125rem solid rgba(255, 255, 255, 0.08);
     background: linear-gradient(180deg, #4d4f95 0%, #2b2d66 100%);
     box-shadow: 0px 24px 48px 0px rgba(0, 1, 44, 0.16);
-    border-radius: 12px;
-    height: 432px;
 
     .card__content {
       margin-top: 20px;
@@ -370,32 +427,10 @@ main {
     }
   }
 }
+
 /////////////////////////////////////////////////////////////////////////////////////////////////
-/* Responsive styles for screens with a maximum width of 768px */
-@media screen and (max-width: 768px) {
-  .grid {
-    justify-content: center; /* Center-align the items */
-    margin-top: 40px; /* Adjust top margin as needed */
-  }
 
-  .grid__item {
-    width: 100%; /* Make the items span the full width of the viewport */
-    max-width: 350px; /* Limit the maximum width of items */
-    height: auto; /* Allow the height to adjust based on content */
 
-    .card__img {
-      width: 100%; /* Make the images span the full width of the item */
-      height: auto; /* Allow the height to adjust based on content */
-    }
-
-    .card__content {
-      .card__header {
-        width: 100%; /* Make the header span the full width */
-        margin: 0 0 10px 0; /* Adjust margins as needed */
-      }
-    }
-  }
-}
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////FOOTER//////////
@@ -484,42 +519,62 @@ span {
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /* Responsive styles for screens with a maximum width of 768px */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   .container_footer {
-    grid-template-columns: 1fr; /* Change to a single column layout */
-    margin-top: 40px; /* Adjust top margin as needed */
-    margin-bottom: 20px; /* Adjust bottom margin as needed */
+    grid-template-columns: 1fr;
+    /* Change to a single column layout */
+    margin-top: 40px;
+    /* Adjust top margin as needed */
+    margin-bottom: 20px;
+    /* Adjust bottom margin as needed */
   }
 
   .logo {
-    margin-left: 0; /* Remove left margin */
-    text-align: center; /* Center-align the logo */
+    margin-left: 0;
+    /* Remove left margin */
+    text-align: center;
+    /* Center-align the logo */
   }
 
-  .menu, .service {
-    margin-left: 0; /* Remove left margin */
-    text-align: center; /* Center-align the menu and service sections */
+  .menu,
+  .service {
+    margin-left: 0;
+    /* Remove left margin */
+    text-align: center;
+    /* Center-align the menu and service sections */
 
     h1 {
-      margin-bottom: 10px; /* Adjust margin as needed */
+      margin-bottom: 10px;
+      /* Adjust margin as needed */
     }
 
-    .menuList, .serviceList {
-      margin-left: 0; /* Remove left margin */
+    .menuList,
+    .serviceList {
+      margin-left: 0;
+      /* Remove left margin */
     }
   }
 
   .social-icons {
-    justify-content: center; /* Center-align the social icons */
-    margin-left: 0; /* Remove left margin */
+    justify-content: center;
+    /* Center-align the social icons */
+    margin-left: 0;
+    /* Remove left margin */
     margin-top: 10px;
 
-    .iconeFB, .iconeX, .iconeInsta {
-      margin-top: 10; /* Remove top margin */
-      margin-left: 18px; /* Add some spacing between icons */
+    .iconeFB,
+    .iconeX,
+    .iconeInsta {
+      margin-top: 10;
+      /* Remove top margin */
+      margin-left: 18px;
+      /* Add some spacing between icons */
     }
   }
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
 /////////////////////////////////////////////////////////////////////////////////////////////////
 hr {
   width: 78vw;
@@ -527,11 +582,14 @@ hr {
   flex-shrink: 0;
   opacity: 0.0797;
   margin-bottom: 41px;
+  margin-top: 2rem;
 }
 
 .Final {
   display: flex;
   justify-content: space-between;
+
+  @include footer();
 }
 
 .copyright {
@@ -553,23 +611,32 @@ hr {
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   hr {
-    width: 100%; /* Make the <hr> span the full width of the viewport */
-    margin-left: 0; /* Remove left margin */
-    margin-right: 0; /* Remove right margin */
-    margin-bottom: 20px; /* Adjust margin as needed */
+    width: 100%;
+    /* Make the <hr> span the full width of the viewport */
+    margin-left: 0;
+    /* Remove left margin */
+    margin-right: 0;
+    /* Remove right margin */
+    margin-bottom: 20px;
+    /* Adjust margin as needed */
   }
 
   .Final {
-    flex-direction: column; /* Change to a vertical layout */
-    align-items: center; /* Center-align the content */
+    flex-direction: column;
+    /* Change to a vertical layout */
+    align-items: center;
+    /* Center-align the content */
   }
 
-  .terms, .private {
+  .terms,
+  .private {
     margin-left: 0;
     margin-right: 0;
-    text-align: center; /* Center-align the text */
+    text-align: center;
+    /* Center-align the text */
   }
 }
+
 /////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,250 @@
+@mixin mobile () {
+    @media screen and (max-width : 768px) {
+        body {
+            background-size: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .infos {
+        justify-content: center;
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .para1 {
+            text-align: center;
+        }
+
+        .buttonDiv {
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .img {
+        display: flex;
+        justify-content: center;
+        margin: 0, auto;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .article {
+        grid-template-columns: 1fr;
+
+        margin-top: 80px;
+    }
+
+    .lorem {
+        width: 100%;
+
+        margin-top: 20px;
+
+        justify-content: center;
+
+
+        span {
+            text-align: center;
+        }
+
+        h1 {
+            top: auto;
+            left: auto;
+            font-size: 36px;
+
+            line-height: 48px;
+            text-align: center;
+        }
+
+        &::before {
+            margin-top: 50px;
+            margin-left: 380px;
+        }
+
+        h2 {
+            top: auto;
+            left: auto;
+            font-size: 18px;
+
+            line-height: 28px;
+            text-align: center;
+
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: center;
+
+        }
+
+        .btnStart {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+
+.article2 {
+    color: $couleur-text;
+    font-family: "Barlow Condensed", sans-serif;
+    display: grid;
+    grid-template-columns: repeat(1, max-content);
+    grid-template-rows: repeat(3, max-content);
+    justify-content: center;
+    text-align: center;
+    gap: 21px;
+
+    &::before {
+        content: "";
+        position: relative;
+        top: 100%;
+        left: -20%;
+        width: 142px;
+        height: 153px;
+        background-image: url("/deco3.png");
+        background-repeat: no-repeat;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 3.5rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 64px;
+    }
+
+    h2 {
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    p {
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        text-align: left;
+        gap: 10px;
+        &::before {
+            left: 5%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grid {
+        justify-content: center;
+        margin-top: 40px;
+
+    }
+
+    .grid__item {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+
+        .card__img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card__content {
+            .card__header {
+                width: 100%;
+                margin: 0 0 10px 0;
+            }
+        }
+    }
+}
+
+@mixin footerHeader{
+    @media screen and (max-width: 768px) {
+        .container_footer {
+            grid-template-columns: 1fr;
+            margin-top: 40px;
+            margin-bottom: 50px;
+            gap: 20px;
+        }
+    
+        .logo {
+            margin-left: 0;
+            text-align: center;
+        }
+    
+        .menu,
+        .service {
+            margin-left: 0;
+            text-align: center;
+    
+            h1 {
+                margin-bottom: 10px;
+            }
+    
+            .menuList,
+            .serviceList {
+                margin-left: 0;
+            }
+        }
+    
+        .social-icons {
+            justify-content: center;
+            margin-left: 0;
+            margin-top: 10px;
+    
+            .iconeFB,
+            .iconeX,
+            .iconeInsta {
+                margin-top: 10;
+                margin-left: 18px;
+            }
+        }
+    }
+}
+
+@mixin footer{
+    @media screen and (max-width: 768px) {
+        hr {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 20px;
+    
+        }
+    
+        .Final {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .terms,
+        .private {
+            margin-left: 0;
+            margin-right: 0;
+            text-align: center;
+        }
+    }
+}
